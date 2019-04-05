@@ -1,0 +1,241 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cadetblue;
+}
+
+input[type=text],
+input[type=date],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    background-color: rgb(18, 179, 23);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cancelbtn:hover{
+        background-color: #f44336;
+}
+
+/* button:hover {
+    background-color: rgb(45, 179, 49);
+} */
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.signup {
+    text-align: center;
+    width: 100%;
+    padding-top: 16px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 80px auto auto auto;
+    border: 1px solid #888;
+    width: 400px;
+    height: auto;
+}
+.modal-content-signup {
+    background-color: #fefefe;
+    margin: 20px auto auto auto;
+    border: 1px solid #888;
+    width: 400px;
+    height: auto;
+}
+
+.modal-content-pro {
+    background-color: #fefefe;
+    margin: 100px auto auto auto;
+    border: 1px solid #888;
+    width: 400px;
+    height: auto;
+}
+
+.modal-content-pro h1{
+    text-align: center
+}
+
+input[type=text]:focus,
+    
+input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+button:hover {
+   opacity: 1;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f73325;
+}
+
+    
+.cancelbtn,    
+.changepsw,    
+.signupbtn {
+    float: left;
+    width: 50%;  
+}
+
+    
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.signup {
+    text-align: center;
+}
+
+.gioitinh{
+    margin: 15px 0;
+}
+.checknam{
+    margin-left: 50px;
+}
+.checknu{
+    margin-left: 50px;
+}
+
+
+.header-pro{
+   text-align: center
+}
+.avatar-pro{
+    height: 150px;
+    width: 150px;
+    margin: auto
+}
+  
+.hoTen-pro,.ngaySinh-pro,.gioiTinh-pro{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.hoTen-editpro input[type=text]{
+    padding: 0 5px;
+    height: 35px;
+    margin-top: -2px;
+    width: 65%;
+}
+.ngaySinh-editpro input[type=date]{
+    padding: 0 5px;
+    height: 35px;
+    margin-top: -8px;
+    width: 65%;
+}
+.gioitinh-editpro{
+    margin-top: 15px;
+    margin-left: 25px
+}
+
+
+.hoTen-editpro,.ngaySinh-editpro{
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.lb1{
+    padding: 5px;
+    text-align: left;
+    float: left;
+    width: 25%
+}
+.lb2{
+    padding: 5px;
+    text-align: left;
+    float: left;
+    width: 60%
+}
+.edit-pro{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.btnHuy{
+    background-color: #f73325
+}
+
+.btnHuy:hover{
+    background-color: #fd1302
+}
+.btnDoi{
+    background-color: limegreen
+}
+
+.btnDoi:hover{
+    background-color: lime
+}
+
+@media only screen and (max-width:400px) {
+    /* For mobile phones: */
+    .modal-content{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }        
+    img.avatar {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    .modal-content-signup {
+        border: 1px solid #888;
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        padding: 5px;
+    }
+    .signup {
+        text-align: center;
+        width: 100%;
+        padding-top: 0;
+    }
+    input[type=text], input[type=date], input[type=password] {
+        width: 100%;
+        padding: 6px 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+}
+    

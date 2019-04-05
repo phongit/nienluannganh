@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="css/form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal-content animate">
+        <div class="header-pro">
+            <h1>Thông tin cá nhân</h1>
+        </div>
+        <div class="imgcontainer">
+            <img src="img/yzf-r6.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <div class="hoTen-pro">
+                <label class="lb1">Họ Tên</label>
+                <label class="lb2"><%= hoTen%></label>
+            </div>
+            <div class="ngaySinh-pro">
+                <label class="lb1">Ngày sinh</label>
+                <label class="lb2"><%= ngaySinh%></label>
+            </div>
+            <div class="gioiTinh-pro">
+                <label class="lb1">Giới tính</label>
+                <label class="lb2"><%= gioiTinh%></label>
+            </div>
+            <div class="edit-pro">
+                <span><a href="editprofile">Chỉnh sửa</a></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+</body>
+
+</html>

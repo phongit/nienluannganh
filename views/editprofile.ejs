@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="css/form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal-content animate">
+        <div class="header-pro">
+            <h1>Thông tin cá nhân</h1>
+        </div>
+        <div class="imgcontainer">
+            <img src="img/yzf-r6.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="container">
+            <div class="hoTen-editpro">
+                <label class="lb1">Họ Tên</label>
+                <input id="hoten" type="text" value='<%= hoTen %>'>
+            </div>
+            <div class="ngaySinh-editpro">
+                <label class="lb1">Ngày sinh</label>
+                <input id="ngaysinh" type="date" value='<%= ngaySinh %>'>
+            </div>
+            <div class="gioitinh-editpro">
+                <label for="psw-repeat"><b>Giới tính</b></label>
+                <% if(gioiTinh == 'Nam'){ %>
+                    <input class="checknam" type="radio" name="gioitinh" value="nam" checked>Nam
+                    <input class="checknu" type="radio" name="gioitinh" value="nu">Nữ
+                <% }else{ %>
+                    <input class="checknam" type="radio" name="gioitinh" value="nam">Nam
+                    <input class="checknu" type="radio" name="gioitinh" value="nu" checked>Nữ
+                <% } %>
+            </div>
+            <div class="edit-pro">
+                <button id="btnDoi" class="btnDoi">Cập nhật</button>
+                <button class="btnHuy">Hủy</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script-editpro.js"></script>
+</body>
+
+</html>

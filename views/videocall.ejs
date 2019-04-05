@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Website Chat</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'
+        integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+</head>
+
+<body>
+    <input type="hidden" id="userName" value="<%= nguoiNhan%>">
+    <input type="hidden" id="hoTen" value="<%= hoTen%>">
+    <input type="hidden" id="checkcall" value="<%= check%>">
+    <div class="background">
+        <div class="calling">
+            <div class="div-img">
+                <div>
+                    <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil" class="avata_Friend">
+                </div>
+            </div>
+            <div class="div-content">
+                <div class="div-thongBao">
+                    <% if(check == 1 || check == 2){ %>
+                    <h4 class="nameFriend">Đang gọi ...</h4>
+                    <% }else{ %>
+                    <h4 class="nameFriend"><%= hoTen%> đang gọi ...</h4>
+                    <% } %>
+                </div>
+                <div class="div-button">
+                    <% if(check == 1 || check == 2){ %>
+                    <div class="btnTuChoi1">
+                        <a><i id="btnTuChoi1" class='fas fa-phone-slash iconEndCall'></i></a>
+                    </div>
+                    <% }else{ %>
+                    <div class="btnChapNhan">
+                        <a><i id="btnChapNhan" class='fas fa-phone iconCall'></i></a>
+                    </div>
+                    <div class="btnTuChoi">
+                        <a><i id="btnTuChoi" class='fas fa-phone-slash iconEndCall'></i></a>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        <div class="div-end-Call">
+            <a><i id="btnTuChoi2" class='fas fa-phone-slash iconEndCall1'></i></a>
+        </div>
+        <div class="video">
+            <div class="FriendVideo">
+                <video id="FriendStream" width="100%" height="546px"></video>
+            </div>
+            <div class="LocalVideo" id="LocalVideo">
+                <video id="LocalStream" width="250px" height="180px"></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <% include footer %>
+    <script src="js/openStream.js"></script>
+    <script src="js/playVideo.js"></script>
+    <script src="js/peer.min.js"></script>
+    <script src="js/script-videocall.js"></script>
+</body>
+
+</html>

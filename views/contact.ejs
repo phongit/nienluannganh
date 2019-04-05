@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/formchat.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inbox_msg">
+            <div class="menu">
+                <div class="avatar"><img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"></div>
+                <div class="contact">
+                    <a>
+                        <span class="fa fa-circle newmesgsTN"></span>
+                        <span class="numberTN">2</span>
+                    </a>
+                    <a>
+                        <i class="fa fa-comments-o icon" id="btn-list-friends"></i>
+                    </a>
+                </div>
+                <div class="contact">
+                    <a>
+                        <span class="fa fa-circle newmesgsDB">
+                        </span>
+                        <span class="numberDB">9</span>
+                    </a>
+                    <a>
+                        <i class="fa fa-address-book-o active_icon" id="btn-contact"></i>
+                    </a>
+                </div>
+                <div class="setting">
+                    <a><i class="fa fa-cog icon" id="btn-setting"></i></a>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <a href="/profile">Thông tin cá nhân</a>
+                        <a href="/resetpass">Đổi mật khẩu</a>
+                        <a href="/">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+            <div class="inbox_people">
+                <div class="headind_srch">
+                    <div class="recent_heading">
+                        <h4 id="recent_heading">Danh bạ</h4>
+                    </div>
+                    <div class="srch_bar">
+                        <div class="stylish-input-group">
+                            <input type="text" class="search-bar" placeholder="Tìm kiếm">
+                            <span class="input-group-addon">
+                                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                            </span> </div>
+                    </div>
+                </div>
+                <div class="inbox_chat">
+                    <div class="reponsive_rec" style="float: left" id="reponsive-newFriend">
+
+                    </div>
+                    <div class="reponsive_rec" style="float: left" id="reponsive-recommendFriends">
+
+                    </div>
+                    <div id="inbox_chat1" style="float: left">
+
+                    </div>
+                </div>
+            </div>
+            <div class="mesgs" id="mesgs">
+                <div id="mesgs-width">
+                    <div id="startChatContact">
+                        <ul class="menu_chat" id="btn-chat">
+                            <li class="username"><a id="hoTen"></a></li>
+                            <li class="call"><a class="fa fa-video-camera video" id="btn-video-call"></a></li>
+                            <li class="call"><a class="fa fa-phone video" id="btn-call"></a></li>
+                        </ul>
+                        <div class="msg_history" id="msg_history">
+    
+                        </div>
+                        <div class="type_msg">
+                            <div class="input_msg_write">
+                                <input type="text" class="write_msg" id="noiDung" placeholder="Type a message" />
+                                <input type="hidden" id="idusername" />
+                                <button class="msg_send_btn" id="btn-sendChat" type="button"><i class="fa fa-paper-plane-o"
+                                        aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="contactFriend">
+                        
+                        <div class="addFriends">
+                            <div class="title_add_Friend">
+                                <p>Lời mời kết bạn</p>
+                            </div>
+                            <div class="content-newFriend" id="content-newFriend">
+    
+                            </div>
+                        </div>
+    
+                        <div class="recommendFriends">
+                            <div class="title_add_Friend">
+                                <p>Gợi ý <input type="text" class="fa fa-search timkiem" placeholder="Tìm kiếm" />
+                                    <i class="fa fa-search iconSearch" aria-hidden="true"></i></p>
+                            </div>
+                            <div class="content-recommendFriends" id="content-recommendFriends">
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        var set = function () {
+            var x = screen.width;
+            var y = screen.availHeight;
+            var height = ((window.innerHeight > 0) ? window.innerHeight : this.screen.height) - 1;
+            height = height - 70;
+            if (height < 1) height = 1;
+            if (height > 70) {
+                // $('#mesgs-width').css("height", (height + 65) + "px");
+                $('#inbox_chat').css("height", (height + 20) + "px");
+                $('.content-recommendFriends').css("height", (((height + 65) / 100) * 68 - 65) + "px");
+                $('.content-newFriend').css("height", (((height + 65) / 100) * 32 - 60) + "px");
+                $('#msg_history').css("height", (height - 60) + "px");
+            }
+
+            var width = ((window.innerWidth > 0) ? window.innerWidth : this.screen.width);
+            $('#mesgs-width').css("width", (width - 360) + "px");
+        }
+        $(window).ready(set);
+        $(window).on("resize", set);
+
+    </script>
+    <% include footer %>
+    <script src="js/script-home.js"></script>
+    <script src="js/script-contact.js"></script>
+</body>
+
+</html>

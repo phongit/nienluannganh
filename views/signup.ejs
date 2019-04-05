@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="css/form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="modal-content-signup">
+        <div class="container">
+            <h1 class="signup">Đăng ký</h1>
+            <label for="psw-repeat"><b>Họ tên</b></label>
+            <input id="hoten" type="text" placeholder="Nhập họ tên">
+
+            <label for="psw-repeat"><b>Ngày sinh</b></label>
+            <input id="ngaysinh" type="date">
+
+            <div class="gioitinh">
+                <label for="psw-repeat"><b>Giới tính</b></label>
+                <input class="checknam" type="radio" name="gioitinh" value="nam">Nam
+                <input class="checknu" type="radio" name="gioitinh" value="nu">Nữ
+            </div>
+
+            <label for="email"><b>Tài khoản</b></label>
+            <input id="taikhoan" type="text" placeholder="Nhập tài khoản" name="email">
+
+            <label for="psw"><b>Mật khẩu</b></label>
+            <input id="matkhau" type="password" placeholder="Nhập mật khẩu" name="psw">
+
+            <label for="psw-repeat"><b>Nhập lại mật khẩu</b></label>
+            <input id="nhaplaimk" type="password" placeholder="Nhập lại mật khẩu" name="psw-repeat">
+
+
+            <div class="clearfix">
+                <button type="button" id="cancelbtn" class="cancelbtn">Hủy</button>
+                <button id="dangky" class="signupbtn">Đăng ký</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script-signup.js"></script>
+</body>
+
+</html>
